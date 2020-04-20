@@ -1,0 +1,19 @@
+textarea {
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 5px; 
+  background: transparent;
+  
+}
+
+button {
+  font-family: 'Bungee', cursive;
+  color: white;
+  background-color: #4056A1;
+  padding: 5px 10px;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', cursive;
+}

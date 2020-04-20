@@ -19,6 +19,9 @@
     
     <!--Header CSS-->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    
+    <!--New Tweet CSS-->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
 
     <!-- External JS -->
@@ -43,16 +46,15 @@
       </div>
   </header>
     <main class="container">
-      <h2></h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Est placerat in egestas erat imperdiet sed euismod nisi porta. Aliquam faucibus purus in massa tempor nec. Malesuada fames ac turpis egestas integer eget aliquet nibh praesent. Auctor urna nunc id cursus metus. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Nibh ipsum consequat nisl vel. Eu lobortis elementum nibh tellus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Eu volutpat odio facilisis mauris sit amet massa vitae tortor.
-
-        In hendrerit gravida rutrum quisque non. Ultrices in iaculis nunc sed augue lacus. Arcu non odio euismod lacinia at quis. Netus et malesuada fames ac turpis egestas. Eu nisl nunc mi ipsum faucibus vitae aliquet. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Dictum varius duis at consectetur lorem donec massa sapien. Facilisis volutpat est velit egestas dui id ornare arcu. Tortor pretium viverra suspendisse potenti. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium.
-        
-        Gravida neque convallis a cras semper auctor. Euismod nisi porta lorem mollis aliquam ut porttitor. Velit sed ullamcorper morbi tincidunt ornare massa. Libero justo laoreet sit amet cursus. Erat pellentesque adipiscing commodo elit at imperdiet dui. Arcu odio ut sem nulla pharetra diam sit. Adipiscing elit pellentesque habitant morbi tristique senectus et netus et. Nec sagittis aliquam malesuada bibendum arcu. Nunc vel risus commodo viverra maecenas accumsan lacus. Mi ipsum faucibus vitae aliquet nec. Nisi scelerisque eu ultrices vitae. Faucibus a pellentesque sit amet porttitor eget. Massa vitae tortor condimentum lacinia quis vel eros donec. Enim nunc faucibus a pellentesque sit.
-        
-        Suspendisse in est ante in nibh. Aliquet risus feugiat in ante metus dictum at. Velit dignissim sodales ut eu sem integer vitae justo. Eget sit amet tellus cras adipiscing enim eu turpis. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Aliquam sem fringilla ut morbi. Placerat orci nulla pellentesque dignissim enim. Enim ut sem viverra aliquet eget sit amet tellus cras. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Bibendum ut tristique et egestas. Nisi quis eleifend quam adipiscing. Pulvinar pellentesque habitant morbi tristique senectus. In arcu cursus euismod quis viverra. Viverra vitae congue eu consequat ac felis donec et odio. Nunc sed id semper risus in hendrerit. Praesent tristique magna sit amet purus gravida quis blandit. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Vulputate eu scelerisque felis imperdiet proin fermentum leo.
-        
-        Purus in mollis nunc sed id semper risus. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Eros in cursus turpis massa tincidunt dui ut ornare lectus. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Dui accumsan sit amet nulla. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. In mollis nunc sed id. Mauris augue neque gravida in fermentum et sollicitudin. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Mattis rhoncus urna neque viverra justo nec ultrices dui.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets/">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </form>
+      </section>
     </main>
   </body>
 </html>
