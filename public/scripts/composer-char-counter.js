@@ -14,9 +14,7 @@ $(document).ready(function() {
 
     //Logic to change counter red when below 0
     if (remainder < 0) {
-      
+      $(this).parent().find('.counter').val(remainder).css('color', '#FF0000')
     }
   });
-
-
 });
