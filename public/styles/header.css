@@ -1,17 +1,17 @@
-header {
+.header-top {
   height: 400px;
   width: 100%;
   margin-top: 120px;
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
-header div img {
+.header-top div img {
   margin-right: auto;
   margin-left: auto;
   display: block; 
 }
 
-header div h2 {
+.header-top div h2 {
   text-align: center;
   color: #FFFFFF
 }

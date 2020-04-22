@@ -23,6 +23,8 @@
     <!--New Tweet CSS-->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!--Tweets CSS-->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,7 +39,7 @@
     <nav>
       <span>tweeter</span>
     </nav>
-    <header>
+    <header class="header-top">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -55,6 +57,24 @@
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
+      </section>
+
+      <section class="section-tweets">
+        <article>
+          <header class="header-tweetbox">
+            <!--<img src="">-->
+            <span class="header-tweet-name">Newton</span>
+            <a href="#"><p class="header-tweet-handle">@SirIsaac</p></a>
+          </header>
+      
+            <span class="tweet-content">If I have seen further it is by standing on the shoulders of giants </span>
+            <span class="span-blackline"></span>
+          
+          <footer class="footer-tweets">  
+            <span class="footer-tweet-date">10 days ago</span>
+            <span class="footer-icons">⚑ ↱↲ ♥︎</span>
+          </footer>
+        </article> 
       </section>
     </main>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"> </script>
