@@ -6,11 +6,12 @@
 $(document).ready(function() {
  
   const createTweetElement = function(tweetObj) {
-    const $tweet = $(` <article class="article-tweet">
+    const $tweet = $(` 
+            <article class="article-tweet">
             <header>
               <img src="${tweetObj.user.avatars}">
               <span class="header-tweet-name">${tweetObj.user.name}</span>
-              <a href="#"> <p class="header-tweet-handle">${tweetObj.user.handle}</p> </a>
+              <a href="#"> <span class="header-tweet-handle">${tweetObj.user.handle}</span> </a>
             </header>
             <span class="tweet-content">${tweetObj.content.text} </span>
             <span class="span-blackline"></span>
@@ -20,6 +21,14 @@ $(document).ready(function() {
             </footer>
             </article>
           `);
+
+          // const $article = $<'article'>.addClass("article-tweet");
+          // const $header = $('<header>');
+          // const $img = $('<img>').attr('src', myUrlHere);
+          // const $span = $('<span>').addClass('header-tweet-name').text(tweetObj.user.name);
+          // $header.append($img).append($span);
+
+
     return $tweet;
   };
 
@@ -56,5 +65,37 @@ $(document).ready(function() {
   ];
 
   renderTweets(data);
+
+//Form Submisssion using Ajax
+    $( "post-tweet-form" ).on( "submit", function( event ) {
+    event.preventDefault();
+    console.log( $( this ).serialize() );
+    $(`#post-tweet-form`).ajaxSubmit({url: `/tweets/`, type:'POST'})
+  });
 });
 
+/* //Load Tweets
+function loadTweets() {
+  $.getJSON('/tweets/')
+  .then(tweets => {
+    console.log('tweets :>> ', tweets);
+    const $tweetContainer = $('#tweets-container');
+    for (const tweet of tweets) {
+      const tweetHtml = ` <article class="article-tweet">
+      <header>
+        <img src="${tweetObj.user.avatars}">
+        <span class="header-tweet-name">${tweetObj.user.name}</span>
+        <a href="#"> <span class="header-tweet-handle">${tweetObj.user.handle}</span> </a>
+      </header>
+      <span class="tweet-content">${tweetObj.content.text} </span>
+      <span class="span-blackline"></span>
+      <footer class="footer-tweets">  
+        <span class="footer-tweet-date">${tweetObj.created_at}</span>
+        <span class="footer-icons">⚑ ↱↲ ♥︎</span>
+      </footer>
+      </article>
+    `
+    $tweetContainer.append(tweetHtml);
+    }
+  })
+} */
