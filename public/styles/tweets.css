@@ -1,16 +1,19 @@
-.section-tweets {
+.article-tweet {
   width: 100%;
-  min-height: 250px;
   margin: 100px auto; 
   border: 5px solid black;
   padding: 0px 20px 50px;
   
 }
+.article-tweet img {
+  float: left;
+}
 
-.section-tweets:hover  {
+.article-tweet:hover  {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(183,212,247,1);
   -moz-box-shadow: 10px 10px 5px 0px rgba(183,212,247,1);
   box-shadow: 10px 10px 5px 0px rgba(183,212,247,1);
+  font-weight: bold;
 }
 
 .header-tweet-handle {
@@ -20,7 +23,7 @@
   visibility: hidden;
 }
 
-.section-tweets:hover .header-tweet-handle {
+.article-tweet:hover .header-tweet-handle {
   visibility: visible;
 }
 
