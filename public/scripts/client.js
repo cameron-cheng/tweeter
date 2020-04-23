@@ -68,53 +68,20 @@ const renderTweets = function(tweetsArray) {
 // renderTweets(data);
 
 //Form Validation
- function checkTweet(tweet) {
-  
+
+function checkTweet(tweet){
   if(!tweet || tweet.length === 0) {
-    $( "#error-message-1" ).slideDown( "slow", function() {
-    $(this).css({
-      display: "block"
-    })
-  });
-
-  $( "#error-message-2" ).slideDown( "slow", function() {
-    $(this).css({
-      display: "none"
-   })
-  });
-    return false;
+    $('#error-container').text("Error! Create tweet!")
+    $("#error-container").slideDown("slow")
+   return false;
   }
-   
   if(tweet.length > 140) {
-    $( "#error-message-1" ).slideDown( "slow", function() {
-      $(this).css({
-        display: "none"
-      })
-    });
-
-    $( "#error-message-2" ).slideDown( "slow", function() {
-      $(this).css({
-        display: "block"
-      })
-    });
+    $('#error-container').text("Error! Tweet exceeds character limit!")
+    $("#error-container").slideDown("slow")
+    return false;
+  } 
+  $('#error-container').slideUp("fast")
   return true;
-  }
-
-if (tweet.length < 140) {
-  $( "#error-message-1" ).slideDown( "slow", function() {
-    $(this).css({
-      display: "none"
-   })
-  });
-
-  $( "#error-message-2" ).slideDown( "slow", function() {
-    $(this).css({
-      display: "none"
-    })
-  });
-
-  return true;
-}
 }
 
 //Load Tweets
