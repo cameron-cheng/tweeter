@@ -94,7 +94,6 @@ function loadTweets() {
 )}
 
 const sendTweet = function(data){
-  console.log('data :>> ', data);
   $.post('/tweets', data)
   .then(res =>
     {
@@ -112,8 +111,10 @@ $('#post-tweet-form').on('submit', function(e) {
     const data = $(this).serialize();
     sendTweet(data);
   }
+  $(this)[0].reset();
   $("#tweet-text").focus()
     return false;
 })
+
   loadTweets()
 });  
