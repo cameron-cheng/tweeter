@@ -52,13 +52,7 @@ const createTweetElement = function(tweetObj) {
           </footer>
           </article>
         `);
-
-        // const $article = $<'article'>.addClass("article-tweet");
-        // const $header = $('<header>');
-        // const $img = $('<img>').attr('src', myUrlHere);
-        // const $span = $('<span>').addClass('header-tweet-name').text(tweetObj.user.name);
-        // $header.append($img).append($span);
-
+        
   return $tweet;
 };
 
@@ -74,18 +68,54 @@ const renderTweets = function(tweetsArray) {
 // renderTweets(data);
 
 //Form Validation
- function checkTweet(tweet)
- {
-   if(!tweet || tweet.length === 0) {
-     alert("Create a Tweet!");
-     return false;
-   }
-   if(tweet.length > 140) {
-     alert("Tweet exceeds character count!");
-     return false;
-   }
-   return true;
- }
+ function checkTweet(tweet) {
+  
+  if(!tweet || tweet.length === 0) {
+    $( "#error-message-1" ).slideDown( "slow", function() {
+    $(this).css({
+      display: "block"
+    })
+  });
+
+  $( "#error-message-2" ).slideDown( "slow", function() {
+    $(this).css({
+      display: "none"
+   })
+  });
+    return false;
+  }
+   
+  if(tweet.length > 140) {
+    $( "#error-message-1" ).slideDown( "slow", function() {
+      $(this).css({
+        display: "none"
+      })
+    });
+
+    $( "#error-message-2" ).slideDown( "slow", function() {
+      $(this).css({
+        display: "block"
+      })
+    });
+  return true;
+  }
+
+if (tweet.length < 140) {
+  $( "#error-message-1" ).slideDown( "slow", function() {
+    $(this).css({
+      display: "none"
+   })
+  });
+
+  $( "#error-message-2" ).slideDown( "slow", function() {
+    $(this).css({
+      display: "none"
+    })
+  });
+
+  return true;
+}
+}
 
 //Load Tweets
 function loadTweets() {
