@@ -41,35 +41,35 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
-    <header class="header-top">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Cameron</span> Cheng</h2>
-      </div>
-  </header>
-    <main class="container">
-      <section class="new-tweet">
-        <div id="error-container">
+      <nav>
+        <span>tweeter</span>
+      </nav>
+    <div id="flex-container">
+      <header class="header-top">
+        <div>
+            <img src="/images/profile-hex.png"> 
         </div>
-        <h2 class="compose-tweet">Compose Tweet</h2>
-        <form id="post-tweet-form" method="POST" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </form>
-      </section>
-
-      <section id="tweets-container">
-      
-      </section>
-    </main>
+        <br>
+        <div>
+            <h2>Cameron Cheng</h2>
+        </div>
+    </header>
+      <main class="container">
+        <section class="new-tweet">
+          <div id="error-container">
+          </div>
+          <h2 class="compose-tweet">Compose Tweet</h2>
+          <form id="post-tweet-form" method="POST" action="/tweets/">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </form>
+        </section>
+        <section id="tweets-container">
+        </section>
+      </main>
+  </div>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"> </script>
   </body>
 </html>

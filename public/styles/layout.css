@@ -13,6 +13,9 @@ html {
 /*
  * Global layout stuff
  */
+ #flex-container {
+  margin-top: 120px;
+}
 
 body {
   color: #545149;
@@ -20,6 +23,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
+
 
 main {
   width: 90%;
@@ -30,6 +34,23 @@ main {
 
 }
 
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 768px) {
+  #flex-container {
+    display: flex;
+    margin-top: 120px;
+  }
+
+.container {
+  width: 70%;
+  margin: 20px;
+}
+
+
+
+}

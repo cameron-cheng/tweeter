@@ -1,7 +1,6 @@
 .header-top {
   height: 400px;
   width: 100%;
-  margin-top: 120px;
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
@@ -14,4 +13,12 @@
 .header-top div h2 {
   text-align: center;
   color: #FFFFFF
+}
+
+@media only screen and (min-width: 768px) {
+  .header-top {
+    width: 30%;
+    margin: 100px;
+  }
+
 }
