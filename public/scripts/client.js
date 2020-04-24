@@ -27,14 +27,14 @@ const data = [
     "created_at": 1461113959088
   }
 ];
-//Escape 
-const escape = function (str) {
+//Escape
+const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
-//Create the tweet body 
+//Create the tweet body
 const createTweetElement = function(tweetObj) {
   const $tweet = $(` 
           <article class="article-tweet">
@@ -65,61 +65,61 @@ const renderTweets = function(tweetsArray) {
 };
 
 //Form Validation
-function checkTweet(tweet){
-  if(!tweet || tweet.length === 0) {
-    $('#error-container').text("Error! Create tweet!")
-    $("#error-container").slideDown("slow")
-   return false;
-  }
-  if(tweet.length > 140) {
-    $('#error-container').text("Error! Tweet exceeds character limit!")
-    $("#error-container").slideDown("slow")
+function checkTweet(tweet) {
+  if (!tweet || tweet.length === 0) {
+    $('#error-container').text("Error! Create tweet!");
+    $("#error-container").slideDown("slow");
     return false;
-  } 
-  $('#error-container').slideUp("fast")
+  }
+  if (tweet.length > 140) {
+    $('#error-container').text("Error! Tweet exceeds character limit!");
+    $("#error-container").slideDown("slow");
+    return false;
+  }
+  $('#error-container').slideUp("fast");
   return true;
 }
 
 //Load Tweets
 function loadTweets() {
   $.getJSON('/tweets/')
-  .then(tweets => {
-    console.log('tweets :>> ', tweets);
-    renderTweets(tweets)
-  }
-)}
-
-const sendTweet = function(data){
-  $.post('/tweets', data)
-  .then(res =>
-    {
-     loadTweets()
+    .then(tweets => {
+      console.log('tweets :>> ', tweets);
+      renderTweets(tweets);
     }
-  );
+    );
 }
+
+const sendTweet = function(data) {
+  $.post('/tweets', data)
+    .then(res => {
+      loadTweets();
+    }
+    );
+};
 
 
 $(document).ready(function() {
 //Form Submission using Ajax
-$('#post-tweet-form').on('submit', function(e) {
-  e.preventDefault();
-  const tweet =  $('#tweet-text').val();
-  if (checkTweet(tweet)) {
-    const data = $(this).serialize();
-    sendTweet(data);
-  }
-  $(this)[0].reset();
-  $(this).parent().find('.counter').css('color', "#000")
-  $("#tweet-text").focus()
+  $('#post-tweet-form').on('submit', function(e) {
+    e.preventDefault();
+    const tweet =  $('#tweet-text').val();
+    if (checkTweet(tweet)) {
+      const data = $(this).serialize();
+      sendTweet(data);
+    }
+    $(this)[0].reset();
+    $(this).parent().find('.counter').css('color', "#000");
+    $("#tweet-text").focus();
     return false;
-})
+  });
 
-  loadTweets()
+  loadTweets();
 
   //Tweet box Animation
   $(".nav-button").on("click", function() {
-    $(".new-tweet").slideToggle("slow")
-    $("#tweet-text").focus()
+    $(".new-tweet").slideToggle("slow");
+    $("#tweet-text").focus();
     
-  })
-});  
+  });
+});
