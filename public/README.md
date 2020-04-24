@@ -10,10 +10,6 @@ Tweeter is A Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on 
 !["screenshot of Mobile View"](https://github.com/cameron-cheng/tweeter/blob/master/public/images/Tweeter%20-%20Mobile%20View.png?raw=true)
 
 ## Dependencies
-- HTML
-- CSS
-- JS
-- jQuery
 - Node.js
 - Express
 - MongoDB
