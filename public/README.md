@@ -1,6 +1,7 @@
 # Tweeter Project
 
-Tweeter is A Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on the client-side, and Node, Express and MongoDB on the server-side. Tweeter creates customized messages or "tweets", a simpler clone of the popular app Twitter.
+Tweeter creates customized messages or "tweets", a simpler clone of the popular app Twitter.
+Tweeter is A Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on the client-side, and Node, Express and MongoDB on the server-side. 
 
 ## Final Product
 
@@ -13,7 +14,7 @@ Tweeter is A Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on 
 - CSS
 - JS
 - jQuery
-g- Node.js
+- Node.js
 - Express
 - MongoDB
 
