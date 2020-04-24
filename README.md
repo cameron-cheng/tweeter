@@ -13,6 +13,7 @@ Tweeter is A Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on 
 - Node.js
 - Express
 - MongoDB
+- Moment.js
 
 ## Getting Started
 
