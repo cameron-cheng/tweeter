@@ -112,6 +112,7 @@ $('#post-tweet-form').on('submit', function(e) {
     sendTweet(data);
   }
   $(this)[0].reset();
+  $(this).parent().find('.counter').css('color', "#000")
   $("#tweet-text").focus()
     return false;
 })
