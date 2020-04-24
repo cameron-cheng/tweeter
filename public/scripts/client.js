@@ -30,7 +30,6 @@ const data = [
 //Escape 
 const escape = function (str) {
   let div = document.createElement('div');
-  // < => &lt; > => &gt;
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
@@ -65,10 +64,7 @@ const renderTweets = function(tweetsArray) {
   }
 };
 
-// renderTweets(data);
-
 //Form Validation
-
 function checkTweet(tweet){
   if(!tweet || tweet.length === 0) {
     $('#error-container').text("Error! Create tweet!")
@@ -102,6 +98,7 @@ const sendTweet = function(data){
   );
 }
 
+
 $(document).ready(function() {
 //Form Submission using Ajax
 $('#post-tweet-form').on('submit', function(e) {
@@ -118,4 +115,11 @@ $('#post-tweet-form').on('submit', function(e) {
 })
 
   loadTweets()
+
+  //Tweet box Animation
+  $(".nav-button").on("click", function() {
+    $(".new-tweet").slideToggle("slow")
+    $("#tweet-text").focus()
+    
+  })
 });  
