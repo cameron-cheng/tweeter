@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const data = [
   {
     "user": {
@@ -36,6 +37,7 @@ const escape = function(str) {
 
 //Create the tweet body
 const createTweetElement = function(tweetObj) {
+  const date = moment(tweetObj.created_at).fromNow()
   const $tweet = $(` 
           <article class="article-tweet">
           <header>
@@ -46,7 +48,7 @@ const createTweetElement = function(tweetObj) {
           <span class="tweet-content">${escape(tweetObj.content.text)} </span>
           <span class="span-blackline"></span>
           <footer class="footer-tweets">  
-            <span class="footer-tweet-date">${escape(tweetObj.created_at)}</span>
+            <span class="footer-tweet-date">${escape(date)}</span>
             <span class="footer-icons">⚑ ↱↲ ♥︎</span>
           </footer>
           </article>
